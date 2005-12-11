@@ -1,0 +1,17 @@
+name: File-ShareDir
+version: 0.01
+abstract: Locate per-dist and per-module shared files
+license: perl
+distribution_type: module
+build_requires:
+  Test::More: 0.47
+requires:
+  perl: 5.005
+  Carp: 0
+  Params::Util: 0.07
+  Class::Inspector: 1.12
+  File::Spec: 0.80
+no_index:
+  directory:
+    - inc
+generated_by: Module::Install version 0.41
