@@ -100,8 +100,6 @@ FUNCTIONS
     Returns the directory path as a string, or dies if it cannot be located
     or is not readable.
 
-    CURRENTLY INCOMPLETE
-
   module_dir
       # Get a module's shared files directory
       my $dir = module_dir('My::Module');
@@ -131,8 +129,6 @@ FUNCTIONS
     Returns the file path as a string, or dies if the file or the dist's
     directory cannot be located, or the file is not readable.
 
-    CURRENTLY INCOMPLETE
-
   module_file
       # Find a file in our module shared dir
       my $dir = module_file('My::Module', 'file/name.txt');
@@ -161,6 +157,9 @@ SUPPORT
 AUTHOR
     Adam Kennedy <cpan@ali.as>, <http://ali.as/>
 
+SEE ALSO
+    Class::Inspector, File::HomeDir, Module::Install, Module::Install::Share
+
 COPYRIGHT
     Copyright (c) 2005 Adam Kennedy. All rights reserved. This program is
     free software; you can redistribute it and/or modify it under the same
@@ -168,7 +167,4 @@ COPYRIGHT
 
     The full text of the license can be found in the LICENSE file included
     with this module.
-
-SEE ALSO
-    Class::Inspector, File::HomeDir, File::ShareDir
 

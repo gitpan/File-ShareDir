@@ -167,9 +167,11 @@ sub load_extensions {
         my ($file, $pkg) = @{$rv};
         next if $self->{pathnames}{$pkg};
 
-        eval { require $file; 1 } or (warn($@), next);
+        local $@;
+        my $new = eval { require $file; $pkg->can('new') };
+        if (!$new) { warn $@ if $@; next; }
         $self->{pathnames}{$pkg} = delete $INC{$file};
-        push @{$self->{extensions}}, $pkg->new( _top => $top_obj );
+        push @{$self->{extensions}}, &{$new}($pkg, _top => $top_obj );
     }
 
     $self->{extensions} ||= [];

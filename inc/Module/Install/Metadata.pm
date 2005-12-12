@@ -84,6 +84,11 @@ sub auto_provides {
     my $self = shift;
     return $self unless $self->is_admin;
 
+    unless (-e 'MANIFEST') {
+        warn "Cannot deduce auto_provides without a MANIFEST, skipping\n";
+        return $self;
+    }
+
     require Module::Build;
     my $build = Module::Build->new(
         dist_name    => $self->{name},

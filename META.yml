@@ -1,5 +1,5 @@
 name: File-ShareDir
-version: 0.01
+version: 0.02
 abstract: Locate per-dist and per-module shared files
 license: perl
 distribution_type: module
