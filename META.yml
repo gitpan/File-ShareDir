@@ -1,17 +1,20 @@
-name: File-ShareDir
-version: 0.02
-abstract: Locate per-dist and per-module shared files
-license: perl
-distribution_type: module
-build_requires:
-  Test::More: 0.47
-requires:
-  perl: 5.005
-  Carp: 0
-  Params::Util: 0.07
-  Class::Inspector: 1.12
-  File::Spec: 0.80
-no_index:
-  directory:
+
+no_index: 
+  directory: 
     - inc
-generated_by: Module::Install version 0.41
+    - t
+generated_by: Module::Install version 0.55
+distribution_type: module
+version: 0.03
+name: File-ShareDir
+author: Adam Kennedy <cpan@ali.as>, L<http://ali.as/>
+license: perl
+build_requires: 
+  Test::More: 0.47
+requires: 
+  perl: 5.005
+  Params::Util: 0.07
+  File::Spec: 0.80
+  Class::Inspector: 1.12
+  Carp: 0
+abstract: Locate per-dist and per-module shared files
