@@ -3,14 +3,15 @@ no_index:
   directory: 
     - inc
     - t
-generated_by: Module::Install version 0.55
+generated_by: Module::Install version 0.62
 distribution_type: module
-version: 0.03
+version: 0.04
 name: File-ShareDir
 author: Adam Kennedy <cpan@ali.as>, L<http://ali.as/>
 license: perl
 build_requires: 
   Test::More: 0.47
+  ExtUtils::MakeMaker: 6.11
 requires: 
   perl: 5.005
   Params::Util: 0.07
