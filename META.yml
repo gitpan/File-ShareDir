@@ -1,21 +1,20 @@
-
+abstract: Locate per-dist and per-module shared files
+author: Adam Kennedy <cpan@ali.as>, L<http://ali.as/>
+build_requires: 
+  ExtUtils::MakeMaker: 6.11
+  Test::More: 0.47
+distribution_type: module
+generated_by: Module::Install version 0.63
+license: perl
+name: File-ShareDir
 no_index: 
   directory: 
     - inc
     - t
-generated_by: Module::Install version 0.62
-distribution_type: module
-version: 0.04
-name: File-ShareDir
-author: Adam Kennedy <cpan@ali.as>, L<http://ali.as/>
-license: perl
-build_requires: 
-  Test::More: 0.47
-  ExtUtils::MakeMaker: 6.11
 requires: 
-  perl: 5.005
-  Params::Util: 0.07
-  File::Spec: 0.80
-  Class::Inspector: 1.12
   Carp: 0
-abstract: Locate per-dist and per-module shared files
+  Class::Inspector: 1.12
+  File::Spec: 0.80
+  Params::Util: 0.07
+  perl: 5.005
+version: 0.05
