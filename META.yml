@@ -1,20 +1,31 @@
-abstract: Locate per-dist and per-module shared files
-author: Adam Kennedy <cpan@ali.as>, L<http://ali.as/>
-build_requires: 
+---
+abstract: 'Locate per-dist and per-module shared files'
+author:
+  - 'Adam Kennedy <adamk@cpan.org>'
+build_requires:
   ExtUtils::MakeMaker: 6.11
   Test::More: 0.47
 distribution_type: module
-generated_by: Module::Install version 0.63
+generated_by: 'Module::Install version 0.76'
 license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+module_name: File::ShareDir
 name: File-ShareDir
-no_index: 
-  directory: 
+no_index:
+  directory:
+    - share
+    - foo
+    - share
     - inc
     - t
-requires: 
+requires:
   Carp: 0
   Class::Inspector: 1.12
   File::Spec: 0.80
   Params::Util: 0.07
   perl: 5.005
-version: 0.05
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.99_01

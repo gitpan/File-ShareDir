@@ -1,4 +1,5 @@
 Changes
+foo/test_file.txt
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
@@ -15,6 +16,10 @@ MANIFEST			This list of files
 META.yml
 README
 share/sample.txt
+share/subdir/sample.txt
 t/01_compile.t
 t/02_main.t
-t/99_pod.t
+t/97_meta.t
+t/98_pod.t
+t/99_pmv.t
+t/lib/ShareDir.pm
