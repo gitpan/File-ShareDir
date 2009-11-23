@@ -2,19 +2,19 @@ NAME
     File::ShareDir - Locate per-dist and per-module shared files
 
 SYNOPSIS
-      use File::SharedDir ':ALL';
-  
-      # Where are distribution-level shared data files kept
+      use File::ShareDir ':ALL';
+      
+  # Where are distribution-level shared data files kept
       $dir = dist_dir('File-ShareDir');
-  
-      # Where are module-level shared data files kept
+      
+  # Where are module-level shared data files kept
       $dir = module_dir('File::ShareDir');
-  
-      # Find a specific file in our dist/module shared dir
+      
+  # Find a specific file in our dist/module shared dir
       $file = dist_file(  'File-ShareDir',  'file/name.txt');
       $file = module_file('File::ShareDir', 'file/name.txt');
-  
-      # Like module_file, but search up the inheritance tree
+      
+  # Like module_file, but search up the inheritance tree
       $file = class_file( 'Foo::Bar', 'file/name.txt' );
 
 DESCRIPTION
@@ -46,8 +46,8 @@ DESCRIPTION
     The problem to solve is really quite simple.
 
       1. Write the data files to the system at install time.
-  
-      2. Know where you put them at run-time.
+      
+  2. Know where you put them at run-time.
 
     Perl's install system creates an "auto" directory for both every
     distribution and for every module file.
@@ -79,12 +79,12 @@ FUNCTIONS
       # Load but don't import, and then call directly
       use File::ShareDir;
       $dir = File::ShareDir::dist_dir('My-Dist');
-  
-      # Import a single function
+      
+  # Import a single function
       use File::ShareDir 'dist_dir';
       dist_dir('My-Dist');
-  
-      # Import all the functions
+      
+  # Import all the functions
       use File::ShareDir ':ALL';
       dist_dir('My-Dist');
 
@@ -184,10 +184,11 @@ AUTHOR
     Adam Kennedy <adamk@cpan.org>
 
 SEE ALSO
-    File::HomeDir, Module::Install, Module::Install::Share
+    File::HomeDir, Module::Install, Module::Install::Share,
+    File::ShareDir::PAR
 
 COPYRIGHT
-    Copyright 2005 - 2008 Adam Kennedy.
+    Copyright 2005 - 2009 Adam Kennedy.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
