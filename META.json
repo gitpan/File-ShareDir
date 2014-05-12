@@ -4,7 +4,7 @@
       "Adam Kennedy <adamk@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.92, CPAN::Meta::Converter version 2.140640",
+   "generated_by" : "ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.141170",
    "license" : [
       "perl_5"
    ],
@@ -48,7 +48,8 @@
          "requires" : {
             "Carp" : "0",
             "Class::Inspector" : "1.12",
-            "File::Spec" : "0.80"
+            "File::Spec" : "0.80",
+            "warnings" : "0"
          }
       },
       "test" : {
@@ -69,5 +70,5 @@
          "web" : "https://github.com/perl5-utils/File-ShareDir"
       }
    },
-   "version" : "1.101"
+   "version" : "1.102"
 }

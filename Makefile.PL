@@ -3,18 +3,22 @@ use warnings;
 
 use ExtUtils::MakeMaker;
 
-eval "use File::ShareDir::Install;";
-$@ and eval "use lib qw,inc/File-ShareDir-Install,; use File::ShareDir::Install;";
-$@ and die $@;
+BEGIN
+{
+    eval "use File::ShareDir::Install;";
+    $@ and eval "use lib qw,inc/File-ShareDir-Install,; use File::ShareDir::Install;";
+    $@ and die $@;
+}
 
-File::ShareDir::Install->VERSION('0.03');
+use File::ShareDir::Install 0.03;
 
-install_share('share');
+install_share 'share';
 
 # Full version
-install_share( module => 'File::ShareDir' => 'foo' );
+install_share module => 'File::ShareDir' => 'foo';
 
 my %RUN_DEPS = (
+    'warnings'         => 0,
     'Carp'             => 0,
     'Class::Inspector' => '1.12',
     'File::Spec'       => '0.80',
@@ -129,8 +133,6 @@ sub WriteMakefile1
 
 package MY;
 
-eval "use File::ShareDir::Install qw(postamble);";
-$@ and eval "use lib qw,inc/File-ShareDir-Install,; use File::ShareDir::Install qw(postamble);";
-$@ and die $@;
+use File::ShareDir::Install qw(postamble);
 
 1;
